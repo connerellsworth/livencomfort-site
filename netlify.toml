@@ -1,0 +1,36 @@
+# Netlify config for livencomfort.com (static site, no build step).
+# Only the public folder is published, so README, CLAUDE.md and docs never go live.
+# The www to apex redirect (www.livencomfort.com to livencomfort.com) is handled in
+# Netlify's domain settings at go-live, so it is not repeated here.
+# public/404.html is picked up automatically by Netlify as the not found page.
+
+[build]
+  publish = "public"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
