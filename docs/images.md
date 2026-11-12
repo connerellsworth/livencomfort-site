@@ -14,11 +14,11 @@ All files go in `public/images/`.
 | home-handmade.jpg | Home, "Made by hand" card | about 300 x 260 | 900 px wide, WebP | Shows Katydid Ceramics and Tea with Tae products. Barbara's photo; check the makers are happy to be shown |
 | home-stationery.jpg | Home, "Stationery and books" card | about 300 x 260 | 900 px wide, WebP | Barbara's photo of lunar calendars and stationery |
 | home-seasonal.jpg | Home, "Seasonal treasures" card | about 300 x 260 | 900 px wide, WebP | Barbara's photo of felt mice ornaments and holiday display |
-| home-barbara-corgi.jpg | Home, "The shop of my life's dream" | about 552 x 440 (full width x 360) | 1600 px wide, WebP | Barbara and her corgi in the shop. Barbara must approve her own photo |
+| home-barbara-corgi.jpg | Home, "The shop of my life's dream" | about 552 x 440 (full width x 360) | 1600 px wide, WebP | Barbara and Annie in the shop. Suggested alt text: "Barbara and her corgi Annie in the shop". Barbara must approve her own photo |
 | insta-1.jpg to insta-4.jpg | Home, "New in the shop" | square, about 275 x 275 | 900 px square, WebP | Barbara's own Instagram posts, saved as images (no embed). Use only photos she took or has rights to |
 | story-storefront.jpg | Our Story, full width | 1160 x 480 (full width x 300) | 1600 px wide, WebP | Storefront on Main Street. Barbara's photo |
 | story-makers.jpg | Our Story, left of pair | about 566 x 340 | 900 px wide, WebP | Maker goods (Erin Flett bags). Barbara's photo; check the maker is happy to be shown |
-| story-barbara-corgi.jpg | Our Story, right of pair | about 566 x 340 | 900 px wide, WebP | Barbara and her corgi. Barbara must approve |
+| story-barbara-corgi.jpg | Our Story, right of pair | about 566 x 340 | 900 px wide, WebP | Barbara and Annie. Suggested alt text: "Barbara and her corgi Annie in the shop". Barbara must approve |
 | og-image.jpg | Social share image (all pages) | 1200 x 630 | 1200 x 630 JPG, under 300 KB | Usually the storefront or hero photo, cropped. Referenced in every page's Open Graph tags but not created yet |
 
 ## How to add a photo later

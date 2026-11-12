@@ -42,11 +42,11 @@ Set up in `public/js/site.js`. Trackers load only when the hostname is exactly `
 
 Update every one of these when the hours change:
 
-1. `public/index.html`, Hours column near the bottom of the page (the `<dl class="hours">` list and the confirm note below it)
+1. `public/index.html`, Hours column near the bottom of the page (the `<dl class="hours">` list)
 2. `public/index.html`, JSON-LD in the `<head>` (`openingHoursSpecification`, 24 hour times)
-3. `public/visit/index.html`, Hours card (the `<dl class="hours">` list and the confirm note below it)
+3. `public/visit/index.html`, Hours card (the `<dl class="hours">` list; the line below it about holiday and seasonal hours on Instagram and Facebook stays)
 
-Current hours: Wednesday to Friday 11 am to 4 pm; Saturday 10 am to 4 pm; Sunday 11 am to 3 pm; Monday and Tuesday closed.
+Current hours (confirmed by Barbara): Wednesday to Saturday 11 am to 4 pm; Sunday 10 am to 3 pm; Monday and Tuesday closed.
 
 ## Placeholders to replace
 
@@ -54,12 +54,8 @@ Text waiting for Barbara (highlighted on the page, `<span class="confirm">`):
 
 | Page | File | Placeholder |
 |---|---|---|
-| Home | `public/index.html` | [Confirm current and winter hours] |
-| Visit | `public/visit/index.html` | [Confirm current and winter hours] |
 | Our Story | `public/our-story/index.html` | [Add one or two sentences on what led Barbara to open the shop and where the name came from.] |
-| Our Story | `public/our-story/index.html` | [corgi's name] (caption under the second photo) |
 | Our Story | `public/our-story/index.html` | [ask permission to quote] (Easy Eco Tips quote) |
-| Privacy | `public/privacy/index.html` | [Barbara to review] |
 
 Photo slots (green boxes, each marked with a `<!-- PHOTO: ... -->` comment). Sizes, export settings and how to add them are in `docs/images.md`.
 

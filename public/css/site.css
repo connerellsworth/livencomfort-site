@@ -611,6 +611,10 @@ address { font-style: normal; }
 @media (max-width: 420px) {
   .btn-row .btn { flex: 1 1 100%; }
   .hours { column-gap: 16px; }
+  /* The Visit card is too narrow for day and time side by side, so stack them. */
+  .card .hours { grid-template-columns: 1fr; row-gap: 2px; }
+  .card .hours dd { margin-bottom: 10px; }
+  .card .hours dd:last-child { margin-bottom: 0; }
   .insta-grid { gap: 12px; }
 }
 
