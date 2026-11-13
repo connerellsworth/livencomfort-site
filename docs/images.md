@@ -12,7 +12,7 @@ All files go in `public/images/`.
 |---|---|---|---|---|
 | home-hero-interior.jpg | Home, hero | about 552 x 520 (full width x 360) | 1600 px wide, WebP | Barbara's own photo of the shop interior |
 | home-handmade.jpg | Home, "Made by hand" card | about 300 x 260 | 900 px wide, WebP | Shows Katydid Ceramics and Tea with Tae products. Barbara's photo; check the makers are happy to be shown |
-| home-stationery.jpg | Home, "Stationery and books" card | about 300 x 260 | 900 px wide, WebP | Barbara's photo of lunar calendars and stationery |
+| home-stationery.jpg | Home, "Stationery and linens" card | about 300 x 260 | 900 px wide, WebP | Barbara's photo of stationery and organic linens |
 | home-seasonal.jpg | Home, "Seasonal treasures" card | about 300 x 260 | 900 px wide, WebP | Barbara's photo of felt mice ornaments and holiday display |
 | home-barbara-corgi.jpg | Home, "The shop of my life's dream" | about 552 x 440 (full width x 360) | 1600 px wide, WebP | Barbara and Annie in the shop. Suggested alt text: "Barbara and her corgi Annie in the shop". Barbara must approve her own photo |
 | insta-1.jpg to insta-4.jpg | Home, "New in the shop" | square, about 275 x 275 | 900 px square, WebP | Barbara's own Instagram posts, saved as images (no embed). Use only photos she took or has rights to |

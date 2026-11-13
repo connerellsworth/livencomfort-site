@@ -29,6 +29,19 @@
     })(window, document, "clarity", "script", CLARITY_ID);
   }
 
+  // Keyboard focus inside the Google Map iframe does not match :focus in this
+  // page, so mark the map wrapper while the map has focus to keep a visible ring.
+  var mapFrame = document.querySelector(".map-frame");
+  if (mapFrame) {
+    var mapWrap = mapFrame.parentNode;
+    window.addEventListener("blur", function () {
+      setTimeout(function () {
+        mapWrap.classList.toggle("has-focus", document.activeElement === mapFrame);
+      }, 0);
+    });
+    window.addEventListener("focus", function () { mapWrap.classList.remove("has-focus"); });
+  }
+
   // One delegated listener for tracked clicks. Sends only if gtag exists.
   document.addEventListener("click", function (event) {
     if (typeof window.gtag !== "function" || !event.target.closest) return;

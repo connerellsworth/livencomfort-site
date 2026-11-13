@@ -8,9 +8,19 @@ All site content, text and images are copyright Live-n-Comfort and their photogr
 
 - Plain HTML, one stylesheet (`public/css/site.css`) and one small script (`public/js/site.js`). No framework, no build step, no package.json.
 - Only the `public` folder is published. README, CLAUDE.md and `docs/` never go live.
-- Fonts (Fraunces and Work Sans) are self-hosted in `public/fonts/` under the SIL Open Font License (`public/fonts/OFL.txt`). Nothing loads from Google Fonts.
+- Fonts are self-hosted in `public/fonts/` under the SIL Open Font License (`public/fonts/OFL.txt`). Nothing loads from Google Fonts.
+  - Cormorant Garamond (500, 600 and 500 italic): headings, the logo, the footer wordmark and the Our Story quote. Never below weight 500 or 22px. The 500 file is preloaded on every page.
+  - Dancing Script (500): the two signature lines only ("Thank you kindly, Barbara" on Home and the closing line on Our Story). Do not use it anywhere else.
+  - Work Sans (400, 500, 600): body text, labels, nav and buttons.
 - `netlify.toml` holds the publish folder, security headers and cache rules. Nothing is connected to Netlify yet.
 - `docs/images.md` is the photo plan. `docs/screenshots/` has screenshots of every page at 375, 768 and 1280 px wide.
+
+## Accessibility
+
+- `public/accessibility/index.html` is the Accessibility page (linked in the footer next to Privacy and listed in the sitemap). Update its "Last updated" line when it changes.
+- The site targets WCAG 2.2 AA. Checks run in November 2026: axe (wcag2a, wcag2aa, wcag21a, wcag21aa, wcag22aa) with 0 violations on every page, text spacing override, 200% and 400% zoom, 320 px width, and a keyboard-only tab-through of every page. Lighthouse mobile scored 100 for accessibility and SEO on Home, Our Story and Visit.
+- Keyboard focus inside the Google Map can't be styled from this site, so `public/js/site.js` adds a `has-focus` class to the map wrapper to keep a visible focus ring.
+- When adding photos, follow the alt text notes in `docs/images.md` and recheck contrast for any text placed over a photo.
 
 ## Preview locally
 
