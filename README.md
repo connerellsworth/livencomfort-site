@@ -48,6 +48,15 @@ Set up in `public/js/site.js`. Trackers load only when the hostname is exactly `
   - Both send `link_location` set to the page path.
 - No cookie banner in v1.
 
+## IndexNow
+
+IndexNow lets the site tell search engines right away when pages change. Bing and the other IndexNow engines (such as Yandex, Seznam and Naver) use it. Google does not use IndexNow, so keep using the sitemap and Search Console for Google.
+
+- Key: `a8bebeb877a66724486c37e4d22b33d0`
+- Key file: `public/a8bebeb877a66724486c37e4d22b33d0.txt`, live at https://livencomfort.com/a8bebeb877a66724486c37e4d22b33d0.txt
+- The key file contains only the key (32 characters, no trailing newline). Don't edit it, rename it or add it to the sitemap.
+- Pings are sent manually after a deploy, never automatically. Nothing in the site or in `netlify.toml` sends them.
+
 ## Where the hours appear
 
 Update every one of these when the hours change:
