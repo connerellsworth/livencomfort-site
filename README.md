@@ -75,7 +75,9 @@ IndexNow lets the site tell search engines right away when pages change. Bing an
 - Key: `a8bebeb877a66724486c37e4d22b33d0`
 - Key file: `public/a8bebeb877a66724486c37e4d22b33d0.txt`, live at https://livencomfort.com/a8bebeb877a66724486c37e4d22b33d0.txt
 - The key file contains only the key (32 characters, no trailing newline). Don't edit it, rename it or add it to the sitemap.
-- Pings are sent manually after a deploy, never automatically. Nothing in the site or in `netlify.toml` sends them.
+- Pings are sent automatically after each production deploy, for changed pages only, by the local build plugin in `netlify/plugins/indexnow` (registered in `netlify.toml`). Before the new deploy goes live, each built page in the sitemap is compared with the live page, ignoring `?v=` version bumps on CSS and JS links. A page whose live fetch fails counts as changed.
+- Local builds, deploy previews and branch deploys skip the ping. The plugin only logs and never fails a deploy.
+- Results are in the Netlify deploy log (lines starting with `[indexnow]`) and in Bing Webmaster Tools, IndexNow report.
 
 ## Where the hours appear
 
