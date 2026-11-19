@@ -617,6 +617,80 @@ address { font-style: normal; }
   display: inline-block;
   padding-block: 12px;
 }
+/* Cookie settings is a button but looks like the footer links next to it. */
+.footer-link-button {
+  display: inline-block;
+  margin: 0;
+  padding: 12px 0;
+  border: 0;
+  background: none;
+  color: var(--footer-text);
+  font: inherit;
+  line-height: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.footer-link-button:hover { color: var(--panel); text-decoration-thickness: 2px; }
+
+/* ---------- Cookie notice (built by site.js) ---------- */
+.cookie-banner {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 90;
+  /* Under 15% of the viewport where the text fits. The floor keeps the buttons
+     from being clipped on short phones; at high zoom the bar scrolls inside. */
+  max-height: max(15vh, min(9rem, 50vh));
+  overflow: auto;
+  background: var(--panel);
+  color: var(--text);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -4px 16px rgba(43, 42, 40, 0.08);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+.cookie-banner[hidden] { display: none; }
+.cookie-banner__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 24px;
+  max-width: calc(var(--max-width) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding: 8px var(--gutter);
+}
+.cookie-banner__text { flex: 1 1 26rem; }
+.cookie-banner__title,
+.cookie-banner__text p { display: inline; }
+.cookie-banner__title {
+  font-family: var(--font-body);
+  font-size: inherit;
+  font-weight: 600;
+  line-height: inherit;
+}
+.cookie-banner__title:focus { outline: none; }
+.cookie-banner__actions {
+  display: flex;
+  gap: 10px;
+}
+.cookie-banner__btn {
+  min-height: 32px;
+  min-width: 88px;
+  padding: 0 18px;
+  border: 1.5px solid var(--accent);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--accent);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+}
+.cookie-banner__btn:hover { background: var(--accent); color: var(--on-accent); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {

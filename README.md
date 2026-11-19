@@ -46,7 +46,27 @@ Set up in `public/js/site.js`. Trackers load only when the hostname is exactly `
   - `get_directions`: clicks on any element with `data-track="get_directions"` (the Get directions link on Visit)
   - `email_click`: clicks on any `mailto:` link
   - Both send `link_location` set to the page path.
-- No cookie banner in v1.
+- Cookie notice and consent: see below.
+
+## Cookie notice and consent
+
+Set up in `public/js/site.js` (no inline script). Analytics are on by default (opt out), except for visitors in the EEA, the UK and Switzerland, where Google Consent Mode keeps analytics cookies off until they choose Accept.
+
+- The visitor's choice is stored in `localStorage` under the key `lnc-analytics`: `accepted`, `declined`, or missing (not chosen yet).
+- A Global Privacy Control signal (`navigator.globalPrivacyControl === true`) counts as `declined`, and the notice does not show.
+- `declined`: neither Google Analytics nor Clarity loads. Choosing Decline on a page where they already loaded tells both to stop right away.
+- Consent Mode defaults run before the gtag `js` and `config` lines: everything denied for the EEA, UK and Switzerland, and analytics granted (ads always denied) everywhere else.
+- The notice is a fixed bar at the bottom of the page. It shows on any host when no choice is stored, so it can be tested on livencomfort.netlify.app, but analytics still load only on the production hostnames.
+- Every page has a "Cookie settings" button in the footer that reopens the notice.
+- If storage is blocked, the choice applies to the current page only.
+
+To reset for testing, run this in the browser console (or clear site data in DevTools under Application, Storage), then reload:
+
+```js
+localStorage.removeItem("lnc-analytics")
+```
+
+When `site.js` or `site.css` changes, bump the `?v=` number on both links in all 7 pages so browsers fetch the new file (the files are cached for a week).
 
 ## IndexNow
 
