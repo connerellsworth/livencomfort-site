@@ -87,16 +87,17 @@ Update every one of these when the hours change:
 2. `public/index.html`, JSON-LD in the `<head>` (`openingHoursSpecification`, 24 hour times)
 3. `public/visit/index.html`, Hours card (the `<dl class="hours">` list; the line below it about holiday and seasonal hours on Instagram and Facebook stays)
 
+4. `public/llms.txt`, Visit section
+
+`public/llms.txt` is a short plain-language summary of the shop for AI assistants and answer engines (live at https://livencomfort.com/llms.txt). It uses only facts already on the site; keep it in step with the hours and address.
+
 Current hours (confirmed by Barbara): Wednesday to Saturday 11 am to 4 pm; Sunday 10 am to 3 pm; Monday and Tuesday closed.
 
 ## Placeholders to replace
 
-Text waiting for Barbara (highlighted on the page, `<span class="confirm">`):
+There are no text placeholders on the live pages right now. New ones go in a `<span class="confirm">` so they are highlighted on the page.
 
-| Page | File | Placeholder |
-|---|---|---|
-| Our Story | `public/our-story/index.html` | [Add one or two sentences on what led Barbara to open the shop and where the name came from.] |
-| Our Story | `public/our-story/index.html` | [ask permission to quote] (Easy Eco Tips quote) |
+The Easy Eco Tips quote on Our Story was removed pending permission to quote it. It can be restored from commit ca47fc8 (`public/our-story/index.html`, the `<figure class="quote-card">` block).
 
 Photo slots (green boxes, each marked with a `<!-- PHOTO: ... -->` comment). Sizes, export settings and how to add them are in `docs/images.md`.
 
@@ -114,6 +115,7 @@ Photo slots (green boxes, each marked with a `<!-- PHOTO: ... -->` comment). Siz
 
 ## Still to add
 
-- `public/images/og-image.jpg` (1200 x 630). Every page already points to it for social sharing, so links shared before it exists will show no image.
-- `image` and `telephone` in the Store JSON-LD on the Home page, once there is a shop photo and a confirmed phone number.
+- `public/images/og-image.jpg` (1200 x 630) is an interim text card, built from `docs/og-card/og-card.html` with headless Chrome and sips. Replace it with a storefront photo using the same file name, so no page needs to change.
+- `image` in the Store JSON-LD on the Home page: add it only with that real storefront photo, not the text card.
+- `telephone` in the Store JSON-LD on the Home page, once there is a confirmed phone number.
 - An apple touch icon (`apple-touch-icon.png`, 180 x 180) once there is a logo.
